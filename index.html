@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mohammed Taheer | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(-45deg, #f3f4f6, #e0f7fa, #f3f4f6, #e0f7fa);
+      background-size: 400% 400%;
+      animation: gradient 15s ease infinite;
+      color: #222;
+    }
+
+    body.dark {
+      background: linear-gradient(-45deg, #121212, #1f1f1f, #2a2a2a, #1f1f1f);
+      color: #eee;
+    }
+
+    @keyframes gradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .navbar {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      background-color: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 999;
+    }
+
+    body.dark .navbar {
+      background-color: rgba(18, 18, 18, 0.9);
+    }
+
+    .navbar h1 {
+      font-size: 1.5rem;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .navbar a {
+      text-decoration: none;
+      font-weight: 500;
+      color: inherit;
+      transition: color 0.3s;
+    }
+
+    .navbar a:hover {
+      color: #007acc;
+    }
+
+    .toggle-btn {
+      padding: 0.4rem 1rem;
+      background: #007acc;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 6rem auto 3rem;
+      padding: 2rem;
+    }
+
+    section {
+      margin-bottom: 4rem;
+    }
+
+    .header {
+      text-align: center;
+    }
+
+    .header img {
+      width: 120px;
+    }
+
+    .header h1 {
+      font-size: 2.8rem;
+      margin: 1rem 0 0.5rem;
+    }
+
+    .tagline {
+      font-size: 1.2rem;
+      color: #555;
+    }
+
+    body.dark .tagline {
+      color: #ccc;
+    }
+
+    .skills span,
+    .projects a {
+      display: inline-block;
+      background: #e0f0ff;
+      color: #222;
+      padding: 0.5rem 0.9rem;
+      margin: 0.3rem;
+      border-radius: 30px;
+      font-weight: 500;
+      transition: 0.3s ease;
+    }
+
+    .dark .skills span,
+    .dark .projects a {
+      background: #333;
+      color: #eee;
+    }
+
+    .projects a:hover {
+      background: #007acc;
+      color: white;
+      transform: scale(1.05);
+    }
+
+    .social a {
+      margin: 0 12px;
+      font-size: 1.6rem;
+      text-decoration: none;
+      color: inherit;
+      transition: 0.3s ease;
+    }
+
+    .social a:hover {
+      color: #007acc;
+      transform: scale(1.2);
+    }
+
+    .resume-btn {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.6rem 1.2rem;
+      background-color: #007acc;
+      color: white;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .resume-btn:hover {
+      background-color: #005fa3;
+    }
+
+    @media screen and (max-width: 768px) {
+      .navbar ul {
+        flex-direction: column;
+        display: none;
+      }
+
+      .navbar.active ul {
+        display: flex;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <h1>Taheer</h1>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="toggle-btn" onclick="toggleTheme()">Toggle Theme</button>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <div class="container">
+    <header class="header">
+      <img src="https://media.giphy.com/media/bGgsc5mWoryfgKBx1u/giphy.gif" alt="Dev">
+      <h1>Mohammed Taheer</h1>
+      <p class="tagline">🚀 <span class="typing"></span></p>
+      <!-- <a href="Taheer_Resume.pdf" class="resume-btn" download>Download Resume</a> -->
+    </header>
+
+    <section id="about">
+      <h2>👨‍💻 About Me</h2>
+      <p>
+        I’m a Full Stack Developer with hands-on experience in building responsive and scalable web applications using Java, Spring Boot, MySQL, and React. I love turning ideas into real-world applications and always aim for clean, efficient code. 
+        I'm passionate about technology, constant learning, and developing solutions that make an impact.
+      </p>
+    </section>
+
+    <section id="education">
+      <h2>🎓 Education</h2>
+      <p><strong>Sri Siddhartha Institute of Technology</strong><br />
+        B.E in Electronics and Communication Engineering<br />
+        CGPA: <strong>8.28</strong>
+      </p>
+    </section>
+
+    <section id="skills" class="skills">
+      <h2>🛠️ Skills</h2>
+      <div>
+        <span>Java</span>
+        <span>Spring Boot</span>
+        <span>Hibernate</span>
+        <span>MySQL</span>
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+        <span>Bootstrap</span>
+      </div>
+    </section>
+
+    <section id="projects" class="projects">
+      <h2>🚀 Projects</h2>
+      <div>
+        <a href="https://github.com/taheer007/Online-Voting-System-using-Face-Recognition" target="_blank">🗳️ Online Voting System</a>
+        <a href="https://github.com/taheer007/Music-Streaming-Website" target="_blank">🎵 Music Streaming Website</a>
+        <a href="https://github.com/taheer007/Virtual-Desktop-Assistant" target="_blank">🤖 Virtual Desktop Assistant</a>
+        <a href="https://github.com/taheer007/Placement-Management-System" target="_blank">📅 Placement Management System</a>
+        <a href="https://github.com/taheer007/Car_Price_Prediction_Using_Linear_and_Lasso_Regression" target="_blank">🚗 Car Price Prediction (ML)</a>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>📫 Contact</h2>
+      <p>Email: <a href="mailto:mohammedtaheer206@gmail.com">mohammedtaheer206@gmail.com</a></p>
+      <div class="social">
+        <a href="https://github.com/taheer007" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/mohammed-taheer" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.instagram.com/flaretahir_07" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('dark');
+    }
+
+    window.onload = function () {
+      new Typed(".typing", {
+        strings: ["Full Stack Developer", "Java Enthusiast", "Problem Solver"],
+        typeSpeed: 60,
+        backSpeed: 40,
+        loop: true
+      });
+    };
+  </script>
+</body>
+</html>
